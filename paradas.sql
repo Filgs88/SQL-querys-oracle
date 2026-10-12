@@ -1,4 +1,5 @@
-select ocorrencia.cod_ocorrencia,
+select
+    ocorrencia.cod_ocorrencia,
 	ocorrencia.descricao,
 	ocorrencia.cod_causa,
 	ocorrencia.causas,
@@ -9,10 +10,14 @@ select ocorrencia.cod_ocorrencia,
 	sistema.codigo_cte_alfa,
 	sistema.descricao as nome_cte
 
-from laboratorio.ocorrencia
+from
+    laboratorio.ocorrencia
 
-left join industria.sistema on ocorrencia.codigo_cte = sistema.codigo_cte
+left join
+    industria.sistema on ocorrencia.codigo_cte = sistema.codigo_cte
 
-where datahora >= to_date('15/03/2025', 'dd/mm/yyyy')
+where
+    datahora >= to_date('15/03/2025', 'dd/mm/yyyy')
 
-order by ocorrencia.datahora
+order by
+    ocorrencia.datahora

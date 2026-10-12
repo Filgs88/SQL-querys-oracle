@@ -1,5 +1,8 @@
-select * 
+select
+    *
 
-from laboratorio.ocorrencia 
+from
+    laboratorio.ocorrencia
 
-where datahora > to_date('01/01/2025', 'dd/mm/yyyy')
+where
+    datahora > to_date('01/01/2026', 'dd/mm/yyyy')

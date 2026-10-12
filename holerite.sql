@@ -1,11 +1,16 @@
-select cod_funcionario,
+select
+    cod_funcionario,
 	ano,
 	mes,
-	coalesce(valor, 0) as valor,
+	coalesce(valor, 0) as valor_salario,
 	memoria_calculo
 
-from rh.basefuncionario
+from
+    rh.basefuncionario
 
-where cod_funcionario = 4144 and
-	ano = 2026 and
-	mes = 4
+where
+    cod_funcionario = 3331 and
+    cod_baseacumulo = 3
+
+order by
+    mes
